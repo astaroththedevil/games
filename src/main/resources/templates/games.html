@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org" lang="en">
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Games</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
 </head>
 <body>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 40px;
+        font-size: 20px;
+    }
+
+    h1 {
+        color: royalblue;
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        width: 400px;
+        text-align: center;
+        border: 2px solid black;
+    }
+
+</style>
   <h1>GAMES</h1>
-
-  <tr th:each="game:${games}"></tr>
-
+  <table>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Developer</th>
+    <th>Genre</th>
+    <th>Year of release</th>
+    <tr th:each="game:${games}">
+      <td th:text="${game.getId()}"></td>
+      <td th:text="${game.getTitle()}"></td>
+      <td th:text="${game.getDeveloper()}"></td>
+      <td th:text="${game.getGenre()}"></td>
+      <td th:text="${game.getYearOfRelease()}"></td>
+    </tr>
+  </table>
 </body>
 </html>

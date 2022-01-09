@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     private String title;
     private String developer;
