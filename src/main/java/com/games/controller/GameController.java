@@ -3,6 +3,7 @@ package com.games.controller;
 import com.games.model.Game;
 import com.games.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,5 +52,11 @@ public class GameController {
     @DeleteMapping("/deletegames")
     public String deleteAllGames() {
         return service.deleteAllGames();
+    }
+
+    @GetMapping("/mygames")
+    public String myGames(Model model) {
+        model.addAttribute("games", service.getGames());
+        return "games";
     }
 }
