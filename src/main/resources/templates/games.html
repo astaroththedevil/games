@@ -4,34 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Games</title>
-  <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 40px;
-        font-size: 20px;
-    }
 
-    h1 {
-        color: royalblue;
-        text-align: center;
-    }
-
-    table {
-        border-collapse: collapse;
-    }
-
-    td {
-        width: 400px;
-        text-align: center;
-        border: 2px solid black;
-    }
-
-</style>
   <h1>GAMES</h1>
   <table>
     <th>ID</th>
@@ -47,5 +23,6 @@
       <td th:text="${game.getYearOfRelease()}"></td>
     </tr>
   </table>
+
 </body>
 </html>

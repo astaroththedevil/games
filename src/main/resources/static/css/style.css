@@ -1,7 +1,22 @@
-h1 {
-    color: royalblue;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px;
+    font-size: 20px;
 }
 
-body {
-    font-size: 20px;
+h1 {
+    color: royalblue;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 400px;
+    text-align: center;
+    border: 2px solid black;
 }
